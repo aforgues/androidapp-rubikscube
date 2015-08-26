@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">My Rubik\'s Cube</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="start_game">Git it a try !</string>
     <string name="action_settings">Settings</string>
 
 </resources>
