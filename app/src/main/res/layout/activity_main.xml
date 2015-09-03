@@ -28,6 +28,7 @@
         android:textColor="#0F0"
         android:background="#000"
         android:enabled="false"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:onClick="onClick" />
 
 </RelativeLayout>
