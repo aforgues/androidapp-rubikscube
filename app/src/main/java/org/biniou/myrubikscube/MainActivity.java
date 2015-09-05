@@ -2,7 +2,6 @@ package org.biniou.myrubikscube;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +12,7 @@ public class MainActivity extends Activity {
     //private MyGLSurfaceView mGLView;
     private TextView title;
     private Button start;
+    private int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,25 +26,14 @@ public class MainActivity extends Activity {
 
         title = (TextView) findViewById(R.id.textView);
         start = (Button) findViewById(R.id.start);
-        start.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Toast.makeText(MainActivity.this, "Click zy voir !", Toast.LENGTH_LONG).show();
-                return true;
-            }
-        });
         start.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                title.setText("Hahahah");
+                Toast.makeText(MainActivity.this, "Click zy voir !", Toast.LENGTH_LONG).show();
+                title.setText(getTitle() + " " + ++count);
             }
         });
 
-    }
-
-    public void onClick(View view) {
-        title.setText("Finally");
-        Toast.makeText(this, "Tu vas cliquer oui !", Toast.LENGTH_LONG).show();
     }
 }
